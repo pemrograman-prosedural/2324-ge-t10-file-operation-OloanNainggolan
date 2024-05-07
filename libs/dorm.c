@@ -6,7 +6,7 @@
 struct dorm_t create_dorm(char *input)
 {
   struct dorm_t drm;
-  strcpy(drm.name, strtok(NULL, "#"));
+  strcpy(drm.name, strtok(input, "#"));
   drm.capacity = atoi(strtok(NULL, "#"));
   char *gend = strtok(NULL, "#");
   if (strcmp(gend, "male\n") == 0)
