@@ -9,11 +9,11 @@ struct dorm_t create_dorm(char *input)
   strcpy(drm.name, strtok(NULL, "#"));
   drm.capacity = atoi(strtok(NULL, "#"));
   char *gend = strtok(NULL, "#");
-  if (strcmp(gend, "male") == 0)
+  if (strcmp(gend, "male\n") == 0)
   {
     drm.gender = GENDER_MALE;
   }
-  else if (strcmp(gend, "female") == 0)
+  else if (strcmp(gend, "female\n") == 0)
   {
     drm.gender = GENDER_FEMALE;
   }
