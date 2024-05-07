@@ -19,7 +19,6 @@ int main(int _argc, char **_argv) {
     struct student_t *students = malloc(student_capacity * sizeof(struct student_t));
 
     FILE *dorm_file = fopen("storage/dorm-repository.txt", "r");
-    FILE *student_file = fopen("storage/student-repository.txt", "r");
 
    
     while (fgets(input, sizeof(input), dorm_file)) {
@@ -27,15 +26,16 @@ int main(int _argc, char **_argv) {
         dorms = realloc(dorms, dorm_capacity * sizeof(struct dorm_t));
         dorms[dorm_count++] = create_dorm_repository(input);
     }
+    fclose(dorm_file); 
 
-   
+    FILE *student_file = fopen("storage/student-repository.txt", "r");
+
     while (fgets(input, sizeof(input), student_file)) {
         student_capacity++;
         students = realloc(students, student_capacity * sizeof(struct student_t));
         students[student_count++] = create_student_repository(input);
     }
-
-    fclose(dorm_file);  
+ 
     fclose(student_file);  
 
  
