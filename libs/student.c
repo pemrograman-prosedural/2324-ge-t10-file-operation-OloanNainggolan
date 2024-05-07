@@ -28,10 +28,10 @@ struct student_t create_student(char *input)
 void print_student(struct student_t mhs)
 {
   if(mhs.gender == GENDER_FEMALE){
-    printf("%s|%s|%s|female", mhs.id, mhs.name, mhs.year);
+    printf("%s|%s|%s|female\n", mhs.id, mhs.name, mhs.year);
   }
   else{
-     printf("%s|%s|%s|male", mhs.id, mhs.name, mhs.year);
+     printf("%s|%s|%s|male\n", mhs.id, mhs.name, mhs.year);
   }
 }
 
@@ -39,18 +39,18 @@ void print_student_detail(struct student_t mhs)
 {
   if(mhs.dorm == NULL){
   if(mhs.gender == GENDER_FEMALE){
-    printf("%s|%s|%s|female", mhs.id, mhs.name, mhs.year);
+    printf("%s|%s|%s|female\n", mhs.id, mhs.name, mhs.year);
   }
   else{
-     printf("%s|%s|%s|male", mhs.id, mhs.name, mhs.year);
+     printf("%s|%s|%s|male\n", mhs.id, mhs.name, mhs.year);
   }
   }
   else{
     if(mhs.gender == GENDER_FEMALE){
-    printf("%s|%s|%s|female|%s", mhs.id, mhs.name, mhs.year, mhs.dorm->name);
+    printf("%s|%s|%s|female|%s\n", mhs.id, mhs.name, mhs.year, mhs.dorm->name);
   }
   else{
-     printf("%s|%s|%s|male|%s", mhs.id, mhs.name, mhs.year, mhs.dorm->name);
+     printf("%s|%s|%s|male|%s\n", mhs.id, mhs.name, mhs.year, mhs.dorm->name);
   }
   }
 }
