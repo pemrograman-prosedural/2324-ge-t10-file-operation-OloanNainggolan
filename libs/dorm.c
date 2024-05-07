@@ -23,29 +23,26 @@ struct dorm_t create_dorm(char *input)
 
 void print_dorm(struct dorm_t drm)
 {
-  printf("%s|%hu|", drm.name, drm.capacity);
   if (drm.gender == GENDER_MALE)
   {
-    printf("male\n");
+  printf("%s|%hu|male\n", drm.name, drm.capacity);
   }
   else if (drm.gender == GENDER_FEMALE)
   {
-    printf("female\n");
+  printf("%s|%hu|female\n", drm.name, drm.capacity);
   }
 }
 
 void print_dorm_detail(struct dorm_t drm)
 {
-  printf("%s|%hu|", drm.name, drm.capacity);
   if (drm.gender == GENDER_MALE)
   {
-    printf("male|");
+  printf("%s|%hu|male|%hu\n", drm.name, drm.capacity, drm.residents_num);
   }
   else if (drm.gender == GENDER_FEMALE)
   {
-    printf("female|");
+  printf("%s|%hu|female|%hu\n", drm.name, drm.capacity, drm.residents_num);
   }
-  printf("%hu\n", drm.residents_num);
 }
 
 int find_dorm(char *asrama, int jmlhdrm, struct dorm_t *drm)
